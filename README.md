@@ -11,12 +11,12 @@
   <a href="https://discord.gg/wG6FY4cKRx"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
-# Nakama
+# Bots
 
 [Documentation](https://ahmadrosid.github.io/nakama/) · [Managed hosting](https://getnakama.cloud/)
 
 > Your next hire will still be human.
-> Nakama runs the agents. Your team keeps the important work.
+> Bots runs the agents. Your team keeps the important work.
 
 Nakama is an AI agent platform for your team. You chat in a dashboard that feels like ChatGPT. Behind that, each agent can use tools, skills, memory, and channels (Telegram, WhatsApp, Discord, and Slack) — with its own identity and permissions.
 
@@ -87,8 +87,8 @@ enabling channel workers.
 # Pull and run the latest image
 docker pull ghcr.io/ahmadrosid/nakama:latest
 umask 077
-printf 'NAKAMA_SECRETS_KEY=%s\n' "$(openssl rand -base64 32)" > nakama-secrets.env
-docker run -d -p 4310:4310 -v nakama-data:/nakama/data --env-file nakama-secrets.env --name nakama ghcr.io/ahmadrosid/nakama:latest
+printf 'NAKAMA_SECRETS_KEY=%s\n' "$(openssl rand -base64 32)" > bots-secrets.env
+docker run -d -p 4310:4310 -v bots-data:/nakama/data --env-file bots-secrets.env --name bots ghcr.io/ahmadrosid/nakama:latest
 ```
 
 **Build from source:**
@@ -114,7 +114,7 @@ Open the dashboard at http://localhost:4310.
 
 ### Integrations
 
-Nakama connects to **Telegram**, **WhatsApp**, **Discord**, **Slack**, and
+Bots connects to **Telegram**, **WhatsApp**, **Discord**, **Slack**, and
 **Composio**. With Composio, you can connect to more than 1,000 external apps.
 Enable them in the web app under **Integrations**.
 

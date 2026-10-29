@@ -130,14 +130,14 @@ function LoginHeader({
   return (
     <div className="flex flex-col items-center text-center">
       <img
-        alt="Nakama"
+        alt="Bots"
         className="mb-4 size-14 rounded-xl"
         src={markLogoSrc(resolvedTheme)}
       />
       <h1 className="font-semibold text-xl tracking-tight">
         {mfaRequired || passkeyRequired
           ? "Verify your identity"
-          : "Sign in to Nakama"}
+          : "Sign in to Bots"}
       </h1>
       {mfaRequired || passkeyRequired || demoLogin ? null : (
         <p className="text-muted-foreground text-sm">
